@@ -1,16 +1,16 @@
 {
-  "name": "federal-midnight-waste-31yqa",
-  "productName": "federal-midnight-waste-31yqa",
+  "name": "many-user-shut-n4n40",
+  "productName": "many-user-shut-n4n40",
   "description": "My Electron application description",
   "keywords": [],
   "main": "./main.js",
   "version": "1.0.0",
-  "author": "Utente",
+  "author": "marco",
   "scripts": {
     "start": "electron ."
   },
   "dependencies": {},
   "devDependencies": {
-    "electron": "11.2.3"
+    "electron": "13.0.0-nightly.20210212"
   }
 }
