@@ -1,0 +1,38 @@
+            body {
+                padding: 0px;
+                margin: 0px;
+                
+               background-color: #333333;
+
+            }
+            h1{
+              text-allign: center; 
+              margin-left: 230px;
+            }
+
+            #title-bar {
+                -webkit-app-region: drag;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                vertical-align: middle;
+                background-color: #202225;
+                padding: none;
+                margin: 0px;
+            }
+
+            #title {
+                position: fixed;
+                top: 0px;
+                left: 6px;
+                color:white;
+
+            }
+
+            #title-bar-btns {
+                -webkit-app-region: no-drag;
+                position: fixed;
+                top: 0px;
+                right: 6px;
+            }
+            

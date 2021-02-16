@@ -1,19 +1,16 @@
 {
-  "name": "gamelauncher",
-  "productName": "gamelauncher",
+  "name": "federal-midnight-waste-31yqa",
+  "productName": "federal-midnight-waste-31yqa",
   "description": "My Electron application description",
   "keywords": [],
   "main": "./main.js",
   "version": "1.0.0",
-  "author": "marco",
+  "author": "Utente",
   "scripts": {
     "start": "electron ."
   },
-  "dependencies": {
-    "remote": "*",
-    "dialog": "*"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "electron": "11.1.1"
+    "electron": "11.2.3"
   }
 }
