@@ -2,12 +2,22 @@ const {app, BrowserWindow} = require('electron')
 
 function createWindow () {
   const mainWindow = new BrowserWindow({
+        titleBarStyle: 'hidden',
     width: 550,
     height: 700,
+    minWidth: 550,
+    minHeight: 700,
+    maxWidth: 550,
+    maxHeight: 700,
     frame: false,
+
   })
   mainWindow.loadFile('index.html')
+  mainWindow.on('closed', function () {
+    mainWindow = null
+  })
 }
+
 
 app.whenReady().then(createWindow)
 
@@ -22,7 +32,6 @@ app.on('activate', function () {
     createWindow()
   }
 })
-
 
 
 function selezionaApp(){

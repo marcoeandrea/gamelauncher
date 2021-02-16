@@ -14,6 +14,17 @@
         <button id="min-btn">-</button>
         <button id="close-btn">x</button>
       </div>
+      <script>  const remote = require('electron').remote;
+
+  document.getElementById("min-btn").addEventListener("click", function (e) {
+       var window = remote.getCurrentWindow();
+       window.minimize(); 
+  });
+
+  document.getElementById("close-btn").addEventListener("click", function (e) {
+       var window = remote.getCurrentWindow();
+       window.close();
+  });</script>
     </div>
 
     <script src="main.js"></script>
@@ -22,7 +33,7 @@
 
     <ul style="list-style-type: none;">
       <img src="buffer" alt="">
-      <li id="giocoUno" onclick="runApp()"></li>
+      <li id="giocoUno" onclick=""></li>
       <li id="giocoDue"></li>
       <li id="giocoTre"></li>
       <li id="giocoQuattro"></li>
