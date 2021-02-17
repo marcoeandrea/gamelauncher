@@ -1,38 +1,24 @@
-const {app, BrowserWindow} = require('electron')
-
-function createWindow () {
-  const mainWindow = new BrowserWindow({
-        titleBarStyle: 'hidden',
+const {app,BrowserWindow,remote} = require('electron')
+let win = null;
+app.on('ready',() => {
+  win = new BrowserWindow({
     width: 550,
     height: 700,
-    minWidth: 550,
-    minHeight: 700,
-    maxWidth: 550,
-    maxHeight: 700,
+resizable: false,
     frame: false,
-
+    webPreferences: {
+        nodeIntegration: true, 
+        enableRemoteModule: true
+    }
   })
-  mainWindow.loadFile('index.html')
-  mainWindow.on('closed', function () {
-    mainWindow = null
-  })
+  win.loadFile('index.html')
+})
+function minbtn(){
+  remote.getCurrentWindow().minimize()
 }
-
-
-app.whenReady().then(createWindow)
-
-app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-})
-
-app.on('activate', function () {
-  if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow()
-  }
-})
-
+function closebtn(){
+  remote.getCurrentWindow().close()
+}
 
 function selezionaApp(){
   let gioco = document.getElementById('nomeGioco').files[0].name;

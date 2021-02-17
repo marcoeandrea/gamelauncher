@@ -6,28 +6,18 @@
         <link rel="stylesheet" type="text/css" href="./styles.css">
   </head>
   <body>
+  <script src="main.js"></script>
     <div id="title-bar">
       <div id="title">
        <span style="vertical-align: middle;"><img src=".\logo.png" style="width:40px;height:40px;"/></span>
       </div>
       <div id="title-bar-btns">
-        <button id="min-btn">-</button>
-        <button id="close-btn">x</button>
+        <button onclick="minbtn()">-</button>
+        <button onclick="closebtn()">x</button>
       </div>
-      <script>  const remote = require('electron').remote;
-
-  document.getElementById("min-btn").addEventListener("click", function (e) {
-       var window = remote.getCurrentWindow();
-       window.minimize(); 
-  });
-
-  document.getElementById("close-btn").addEventListener("click", function (e) {
-       var window = remote.getCurrentWindow();
-       window.close();
-  });</script>
     </div>
 
-    <script src="main.js"></script>
+
     <input id="nomeGioco" type="file" accept=".exe" onchange="selezionaApp()">
     <h1>giochi</h1>
 

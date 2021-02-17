@@ -1,6 +1,6 @@
 {
-  "name": "many-user-shut-n4n40",
-  "productName": "many-user-shut-n4n40",
+  "name": "gamelauncher",
+  "productName": "gamelauncher",
   "description": "My Electron application description",
   "keywords": [],
   "main": "./main.js",
