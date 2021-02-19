@@ -20,18 +20,30 @@ body {
   right: 6px;
 }
 #minbtn{
+  height: 40px;
+  width:60px;
   background-color: Transparent;
   border: none;
   cursor:pointer;
   outline:none;
   color: white;
+  font-size: 20px;
+}
+#minbtn:hover{
+  background-color: grey;
 }
 #closebtn{
+  height: 40px;
+  width:60px;
   background-color: Transparent;
   border: none;
   cursor:pointer;
   outline:none;
   color: white;
+  font-size: 20px;
+}
+#closebtn:hover{
+  background-color: red;
 }
 #nomeGioco{
   padding-top: 30px;
