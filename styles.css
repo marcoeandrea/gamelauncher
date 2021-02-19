@@ -1,24 +1,40 @@
-            body {
-                padding: 0px;
-                margin: 0px;
-                
-               background-color: black;
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+}
+#title-bar {
+  -webkit-app-region: drag;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  background-color: black;
+  padding: none;
+  margin: 0px;
+}
 
-            }
-            #title-bar {
-                -webkit-app-region: drag;
-                height: 40px;
-                line-height: 40px;
-                vertical-align: middle;
-                background-color: black;
-                padding: none;
-                margin: 0px;
-            }
-
-            #title-bar-btns {
-                -webkit-app-region: no-drag;
-                position: fixed;
-                top: 0px;
-                right: 6px;
-            }
+#title-bar-btns {
+  -webkit-app-region: no-drag;
+  position: fixed;
+  top: 0px;
+  right: 6px;
+}
+#minbtn{
+  background-color: Transparent;
+  border: none;
+  cursor:pointer;
+  outline:none;
+  color: white;
+}
+#closebtn{
+  background-color: Transparent;
+  border: none;
+  cursor:pointer;
+  outline:none;
+  color: white;
+}
+#nomeGioco{
+  padding-top: 30px;
+  right: 10px;
+}
             
