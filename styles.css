@@ -5,12 +5,6 @@
                background-color: black;
 
             }
-            h1{
-              text-allign: center; 
-              margin-left: 230px;
-              color: white;
-            }
-
             #title-bar {
                 -webkit-app-region: drag;
                 height: 40px;
