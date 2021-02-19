@@ -13,6 +13,7 @@ resizable: false,
   })
   win.loadFile('index.html')
 })
+var fs = require('fs');
 function minbtn(){
   remote.getCurrentWindow().minimize()
 }
@@ -22,15 +23,23 @@ function closebtn(){
 
 function selezionaApp(){
   let gioco = document.getElementById('nomeGioco').files[0].name;
-  let ico = document.getElementById('nomeGioco').files[0].path;
+
   gioco = gioco.substr(0,gioco.length-4);
   document.getElementById('giocoUno').innerHTML = gioco ;
+
 }
+
 function runApp(){
+  let urlFilter = document.getElementById('nomeGioco').files[0].name;
+  urlFilter = urlFilter.substr(urlFilter.length-4,);
+
+  if(urlFilter == '.url'){
+
+  }
+  else{  
   let gioco = document.getElementById('nomeGioco').files[0].path;
   var child = require('child_process').execFile;
-
-child(gioco, function(err, data) {
+  child(gioco, function(err, data) {
     if(err){
        console.error(err);
        return;
@@ -38,4 +47,5 @@ child(gioco, function(err, data) {
  
     console.log(data.toString());
 });
+;}
 };
