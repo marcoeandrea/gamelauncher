@@ -22,21 +22,24 @@ function closebtn(){
 }
 
 function selezionaApp(){
-  let gioco = document.getElementById('nomeGioco').files[0].name;
+  let urlFilter = document.getElementById('nomeGioco').files[0].name;
 
-  gioco = gioco.substr(0,gioco.length-4);
+  urlFilter = urlFilter.substr(urlFilter.length-4);
+
+  if(urlFilter == '.url'){
+      let gioco = document.getElementById('nomeGioco').files[0].path;
+location.href = gioco;
+  }
+  else{
+      gioco = gioco.substr(0,gioco.length-4);
   document.getElementById('giocoUno').innerHTML = gioco ;
 
+  }
 }
 
 function runApp(){
-  let urlFilter = document.getElementById('nomeGioco').files[0].name;
-  urlFilter = urlFilter.substr(urlFilter.length-4,);
+location.href = 'uplay://launch/635/0';
 
-  if(urlFilter == '.url'){
-
-  }
-  else{  
   let gioco = document.getElementById('nomeGioco').files[0].path;
   var child = require('child_process').execFile;
   child(gioco, function(err, data) {
@@ -47,5 +50,4 @@ function runApp(){
  
     console.log(data.toString());
 });
-;}
 };
