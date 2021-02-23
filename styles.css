@@ -18,7 +18,7 @@ body {
   -webkit-app-region: no-drag;
   position: fixed;
   top: 0px;
-  right: 6px;
+  right: 0px;
 }
 #minbtn{
   height: 40px;
